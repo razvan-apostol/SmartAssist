@@ -34,7 +34,6 @@
 #define IPAD_MINI_BEACON_MAJOR_ID           (51073)
 #define IPAD_MINI_BEACON_MINOR_ID           (51973)
 
-
 typedef enum {
     SABeaconBlue = BLUE_BEACON_MINOR_ID,
     SABeaconGreen = GREEN_BEACON_MINOR_ID,
@@ -56,7 +55,9 @@ typedef enum {
 @property (assign, nonatomic) CGFloat               dotRange;
 
 @property (weak, nonatomic) IBOutlet UILabel        * labelDistance;
-@property (weak, nonatomic) IBOutlet UILabel *labelClosestBeacon;
+@property (weak, nonatomic) IBOutlet UILabel        * labelClosestBeacon;
+
+@property (strong, nonatomic) ESTBeacon             * lastKnownBeacon;
 
 @property (strong, nonatomic) NSMutableArray        * availableBeacons;
 
@@ -85,7 +86,18 @@ typedef enum {
     // TODO: GET USER and Event Request Request
     
     [[SARequestManager sharedManager] getUserRequestWithCompletionBlock:^(id obj) {
-        SALog(@"Received user: %@", obj);
+        
+        NSArray *users = (NSArray *)obj;
+        
+        if (users.count) {
+            NSDictionary *firstUserDict = [users firstObject];
+            
+            NSString *userID = firstUserDict[@"Id"];
+            
+            WKUser *user = [[[SACoreDataManager sharedManager] fetchDataWithParameterBlock:^(NSFetchRequest *requestToBeParametered) {
+                [requestToBeParametered setPredicate:[NSPredicate predicateWithFormat:@"identifier == %@", userID]];
+            } andTableName:@"WKUser"] firstObject];
+        }
     }];
     
     [[SARequestManager sharedManager] getEventsRequestWithCompletionBlock:^(id obj) {
@@ -143,8 +155,6 @@ typedef enum {
     [self.positionDot setAlpha:1.];
     
     [self.view addSubview:self.positionDot];
-    
-    
 }
 
 - (NSString *)beaconNameForID:(NSNumber *)beaconID
@@ -288,6 +298,15 @@ typedef enum {
         
         ESTBeacon *closestBeacon = [self.availableBeacons firstObject];
         
+        // don't sent beacon if distance is -1, out of range, or faill shit, don't know
+        if (self.lastKnownBeacon && [self.lastKnownBeacon.minor isEqualToNumber:closestBeacon.minor] &&
+            [self.lastKnownBeacon.distance integerValue] == -1 && [self.lastKnownBeacon.distance isEqualToNumber:closestBeacon.distance]) {
+            self.lastKnownBeacon = nil;
+            return;
+        }
+        
+        self.lastKnownBeacon = closestBeacon;
+        
         self.labelClosestBeacon.text = [self beaconNameForID:closestBeacon.minor];
         
         [[SARequestManager sharedManager] postEventRequestWithID:[self serverIDForBeaconID:closestBeacon.minor] distance:closestBeacon.distance CompletionBlock:NULL];
@@ -343,7 +362,5 @@ typedef enum {
     
     [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
 }
-
-
 
 @end
