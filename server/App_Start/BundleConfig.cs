@@ -22,8 +22,6 @@ namespace server
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
-                //"~/Content/grayscale.css",
-                //"~/Content/sb-admin.css",
                 "~/Content/font-awesome.css",
                 "~/Content/fonts.css"));
 

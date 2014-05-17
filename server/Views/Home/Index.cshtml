@@ -68,7 +68,15 @@
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Demo</h2>
-                <a href="demo" class="btn btn-default btn-lg">Visit Demo Page</a>
+                <form role="form" method="post" action="/demo/Login">
+                    <div class="form-group input-group">
+                        <input type="text" class="form-control" placeholder="Username" value="demo">
+                    </div>
+                    <div class="form-group input-group">
+                        <input type="password" class="form-control" placeholder="Password" value="demo">
+                    </div>
+                    <button type="submit" class="btn btn-default">Login</button>
+                </form>
             </div>
         </div>
     </div>

@@ -209,7 +209,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Demo\Index.cshtml" />
+    <Content Include="Views\Demo\Manage.cshtml" />
+    <Content Include="Views\Demo\Login.cshtml" />
+    <Content Include="Views\Demo\LeftMenu.cshtml" />
+    <Content Include="Views\Demo\TopMenu.cshtml" />
+    <Content Include="Views\Demo\TopView.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -233,15 +237,14 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>43987</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:43987/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://google.ro</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

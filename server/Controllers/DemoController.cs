@@ -10,7 +10,24 @@ namespace server.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            if (Session["loggedin"] == null)
+                return Redirect("/#demo");
+            else
+                return View("Manage");
+        }
+
+        public ActionResult Login()
+        {
+            Session["loggedin"] = true;
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Logout()
+        {
+            Session["loggedin"] = null;
+
+            return RedirectToAction("Index");
         }
 	}
 }
