@@ -19,4 +19,6 @@ typedef void (^RequestCompletionBlock)(id obj);
 
 - (void)getEventsRequestWithCompletionBlock:(RequestCompletionBlock)completionBlock;
 
+- (void)postEventRequestWithID:(NSNumber *)beaconID distance:(NSNumber *)distance CompletionBlock:(RequestCompletionBlock)completionBlock;
+
 @end

@@ -11,6 +11,7 @@
  */
 
 #import "SACoreDataManager.h"
+#import "SADefines.h"
 
 #define CORE_DATA_MAIN_TABLE @"Application"
 
@@ -102,7 +103,7 @@ static SACoreDataManager *_coreDataManager = nil;
          NSError* err = nil;
          
          if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&err]) {
-         NSLog(@"Oops, could copy preloaded data");
+         SALog(@"Oops, could copy preloaded data");
          }*/
     }
     
@@ -111,7 +112,7 @@ static SACoreDataManager *_coreDataManager = nil;
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        SALog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
     return _persistentStoreCoordinator;
@@ -186,7 +187,7 @@ static SACoreDataManager *_coreDataManager = nil;
     NSError *error;
     NSArray *array = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
-    if (error) NSLog(@"Fetch request failed");
+    if (error) SALog(@"Fetch request failed");
     else return array;
     
     return nil;
@@ -271,7 +272,7 @@ static SACoreDataManager *_coreDataManager = nil;
     NSError *error = nil;
     [self.managedObjectContext save:&error];
     
-    if (error) NSLog(@"Could not save changes to database: %@, %@", [error localizedDescription], error.userInfo);
+    if (error) SALog(@"Could not save changes to database: %@, %@", [error localizedDescription], error.userInfo);
 }
 
 - (void)saveContext
@@ -282,7 +283,7 @@ static SACoreDataManager *_coreDataManager = nil;
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            SALog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
     }

@@ -8,6 +8,7 @@
 
 #import "SARequestManager.h"
 #import "AFNetworking.h"
+#import "SADefines.h"
 
 @interface SARequestManager ()
 
@@ -49,12 +50,12 @@
     self.completionBlock = completionBlock;
     
     [self.operationManager GET:@"http://10.2.1.193/api/User" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"Users: %@", responseObject);
+        SALog(@"Users: %@", responseObject);
         
         [self executeComplitionBlockWithObj:nil];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Users Error: %@", error);
+        SALog(@"Users Error: %@", error);
         
         [self executeComplitionBlockWithObj:nil];
     }];
@@ -65,12 +66,34 @@
     self.completionBlock = completionBlock;
     
     [self.operationManager GET:@"http://10.2.1.193/api/Beacon" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"Events: %@", responseObject);
+        SALog(@"Events: %@", responseObject);
         
         [self executeComplitionBlockWithObj:nil];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Events Error: %@", error);
+        SALog(@"Events Error: %@", error);
+        
+        [self executeComplitionBlockWithObj:nil];
+    }];
+}
+
+- (void)postEventRequestWithID:(NSNumber *)beaconID distance:(NSNumber *)distance CompletionBlock:(RequestCompletionBlock)completionBlock
+{
+    self.completionBlock = completionBlock;
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary new];
+    parameters[@"Beacon"]       = beaconID;
+    parameters[@"Timestamp"]    = @([[NSDate date] timeIntervalSince1970]);
+    parameters[@"Distance"]     = distance;
+    
+    [self.operationManager POST:@"http://10.2.1.193:80/api/Event" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        SALog(@"Event response: %@", responseObject);
+        
+        [self executeComplitionBlockWithObj:nil];
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        SALog(@"Event response Error: %@", error);
         
         [self executeComplitionBlockWithObj:nil];
     }];

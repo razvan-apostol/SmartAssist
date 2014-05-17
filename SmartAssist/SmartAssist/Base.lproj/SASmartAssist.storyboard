@@ -34,11 +34,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88B-ui-dTZ">
+                                <rect key="frame" x="0.0" y="31" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="imageViewLogo" destination="DKV-6F-Wyq" id="zVj-Gc-rsX"/>
+                        <outlet property="labelClosestBeacon" destination="88B-ui-dTZ" id="emi-SO-cT5"/>
                         <outlet property="labelDistance" destination="5mj-2U-SZW" id="5Zv-9D-MeD"/>
                         <outlet property="labelHello" destination="tGe-xV-V0v" id="G0L-JY-PrI"/>
                         <segue destination="FEo-qd-WxI" kind="push" identifier="mainScreenSegueIdentifier" id="qHe-Ic-7xJ"/>

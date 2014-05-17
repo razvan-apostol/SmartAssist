@@ -55,7 +55,10 @@ typedef enum {
 @property (assign, nonatomic) CGFloat               dotMinPos;
 @property (assign, nonatomic) CGFloat               dotRange;
 
-@property (weak, nonatomic) IBOutlet UILabel *labelDistance;
+@property (weak, nonatomic) IBOutlet UILabel        * labelDistance;
+@property (weak, nonatomic) IBOutlet UILabel *labelClosestBeacon;
+
+@property (strong, nonatomic) NSMutableArray        * availableBeacons;
 
 @end
 
@@ -67,6 +70,7 @@ typedef enum {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -75,6 +79,8 @@ typedef enum {
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.availableBeacons = [NSMutableArray array];
     
     // TODO: GET USER and Event Request Request
     
@@ -111,6 +117,15 @@ typedef enum {
     [self.view bringSubviewToFront:self.labelDistance];
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark -
+#pragma mark Private Methods
+
 - (void)setupView
 {
     self.dotMinPos = 150;
@@ -132,10 +147,69 @@ typedef enum {
     
 }
 
-- (void)didReceiveMemoryWarning
+- (NSString *)beaconNameForID:(NSNumber *)beaconID
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSString *beaconName = nil;
+    switch ([beaconID integerValue]) {
+        case SABeaconBlue:
+            beaconName = @"BLUE";
+            break;
+        case SABeaconGreen:
+            beaconName = @"GREEN";
+            break;
+        case SABeaconPurple:
+            beaconName = @"PURPLE";
+            break;
+        case SABeaconIphoneCipri:
+            beaconName = @"iP Cipri";
+            break;
+        case SABeaconIpadMini:
+            beaconName = @"IPad Mini";
+            break;
+        default:
+            beaconName = [beaconID stringValue];
+            break;
+    }
+    
+    return beaconName;
+}
+
+- (NSNumber *)serverIDForBeaconID:(NSNumber *)beaconID
+{
+    NSNumber *beaconSErverID = nil;
+    switch ([beaconID integerValue]) {
+        case SABeaconBlue:
+            beaconSErverID = @(1);
+            break;
+        case SABeaconGreen:
+            beaconSErverID = @(2);
+            break;
+        case SABeaconPurple:
+            beaconSErverID = @(3);
+            break;
+        case SABeaconIphoneCipri:
+            beaconSErverID = @(4);
+            break;
+        case SABeaconIpadMini:
+            beaconSErverID = @(5);
+            break;
+        default:
+            beaconSErverID = beaconID;
+            break;
+    }
+    
+    return beaconSErverID;
+}
+
+- (NSInteger)indexForBeacon:(ESTBeacon *)beacon
+{
+    for (ESTBeacon *currentBeacon in self.availableBeacons) {
+        if ([currentBeacon.minor isEqualToNumber:beacon.minor]) {
+            return [self.availableBeacons indexOfObject:currentBeacon];
+        }
+    }
+    
+    return NSIntegerMax;
 }
 
 #pragma mark -
@@ -166,47 +240,110 @@ typedef enum {
 #pragma mark ESTMANAGER delegate
 
 - (void)beaconManager:(ESTBeaconManager *)manager
-     didRangeBeacons:(NSArray *)beacons
-            inRegion:(ESTBeaconRegion *)region
+      didRangeBeacons:(NSArray *)beacons
+             inRegion:(ESTBeaconRegion *)region
 {
     
-    if([beacons count] > 0)
-    {
+    if([beacons count] > 0) {
         // beacon array is sorted based on distance
         // closest beacon is the first one
         
         NSMutableString *string = [NSMutableString new];
         for (ESTBeacon *beacon in beacons) {
+            
+            // beacons found
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"minor == %@", beacon.minor];
+            
+            NSArray *foundBeacons = [self.availableBeacons filteredArrayUsingPredicate:predicate];
+            
+            if (!foundBeacons.count) {
+                // add new beacon
+                [self.availableBeacons addObject:beacon];
+            } else {
+                // update beacon
+                
+                // take the first beacon, there showed be only one
+                NSInteger index = [self indexForBeacon:[foundBeacons firstObject]];
+                
+                if (index != NSIntegerMax) {
+                    [self.availableBeacons replaceObjectAtIndex:index withObject:beacon];
+                }
+            }
+            
+            // other measuring functionality
             float newYPos = ((float)beacon.rssi / -100.) * self.dotRange;
             self.positionDot.center = CGPointMake(self.view.bounds.size.width / 2, newYPos);
             
-            NSString *beaconColor = nil;
-            switch ([beacon.minor integerValue]) {
-                case SABeaconBlue:
-                    beaconColor = @"BLUE";
-                    break;
-                case SABeaconGreen:
-                    beaconColor = @"GREEN";
-                    break;
-                case SABeaconPurple:
-                    beaconColor = @"PURPLE";
-                    break;
-                case SABeaconIphoneCipri:
-                    beaconColor = @"iP Cipri";
-                    break;
-                case SABeaconIpadMini:
-                    beaconColor = @"IPad Mini";
-                    break;
-                default:
-                    beaconColor = [beacon.minor stringValue];
-                    break;
-            }
-            
-            [string appendString:[ NSString stringWithFormat:@"%@: %.2f meters\n", beaconColor, [beacon.distance floatValue]]];
+            NSString *beaconName = [self beaconNameForID:beacon.minor];
+            [string appendString:[ NSString stringWithFormat:@"%@: %.2f meters\n", beaconName, [beacon.distance floatValue]]];
         }
         
         self.labelDistance.text = string;
+        
+        // sort beacons by distance
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:YES];
+        self.availableBeacons = [NSMutableArray arrayWithArray: [self.availableBeacons sortedArrayUsingDescriptors:@[sortDescriptor]]];
+        
+        // maybe do some custom functionality where you are at the same distance between 2 beacons
+        
+        ESTBeacon *closestBeacon = [self.availableBeacons firstObject];
+        
+        self.labelClosestBeacon.text = [self beaconNameForID:closestBeacon.minor];
+        
+        [[SARequestManager sharedManager] postEventRequestWithID:[self serverIDForBeaconID:closestBeacon.minor] distance:closestBeacon.distance CompletionBlock:NULL];
+        
+        return;
     }
+    
+    self.labelClosestBeacon.text    = @"No beacon in range";
+    self.labelDistance.text         = @"0.00 meters";
 }
+         
+- (NSNumberFormatter *)twoDecimalFormat
+{
+    NSNumberFormatter *doubleValueWithMaxTwoDecimalPlaces = [[NSNumberFormatter alloc] init];
+    [doubleValueWithMaxTwoDecimalPlaces setNumberStyle:NSNumberFormatterDecimalStyle];
+    [doubleValueWithMaxTwoDecimalPlaces setPaddingPosition:NSNumberFormatterPadAfterSuffix];
+    [doubleValueWithMaxTwoDecimalPlaces setFormatWidth:2];
+    
+    return doubleValueWithMaxTwoDecimalPlaces;
+}
+
+- (void)beaconManager:(ESTBeaconManager *)manager
+   didDetermineState:(CLRegionState)state
+           forRegion:(ESTBeaconRegion *)region
+{
+//    if(state == CLRegionStateInside)
+//    {
+//        [self setProductImage];
+//    }
+//    else
+//    {
+//        [self setDiscountImage];
+//    }
+}
+
+- (void)beaconManager:(ESTBeaconManager *)manager
+      didEnterRegion:(ESTBeaconRegion *)region
+{
+    // iPhone/iPad entered beacon zone
+//    [self setProductImage];
+}
+
+- (void)beaconManager:(ESTBeaconManager *)manager
+       didExitRegion:(ESTBeaconRegion *)region
+{
+    // iPhone/iPad left beacon zone
+//    [self setDiscountImage];
+    
+    // present local notification
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.alertBody = [NSString stringWithFormat:@"You exit beacon %@ range!", [self beaconNameForID:region.minor]];
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    
+    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+}
+
+
 
 @end
