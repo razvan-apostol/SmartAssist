@@ -1,5 +1,5 @@
 //
-//  SAViewController.h
+//  SAMainViewController.h
 //  SmartAssist
 //
 //  Created by Iulian Poenaru on 17/05/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SAViewController : UIViewController
+@interface SAMainViewController : UIViewController
 
 @end

@@ -13,14 +13,13 @@
 		67F6D4A0192748D700013623 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67F6D49E192748D700013623 /* InfoPlist.strings */; };
 		67F6D4A2192748D700013623 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4A1192748D700013623 /* main.m */; };
 		67F6D4A6192748D700013623 /* SAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4A5192748D700013623 /* SAAppDelegate.m */; };
-		67F6D4A9192748D700013623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F6D4A7192748D700013623 /* Main.storyboard */; };
+		67F6D4A9192748D700013623 /* SASmartAssist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F6D4A7192748D700013623 /* SASmartAssist.storyboard */; };
 		67F6D4AE192748D700013623 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F6D4AD192748D700013623 /* Images.xcassets */; };
 		67F6D4B5192748D700013623 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D4B4192748D700013623 /* XCTest.framework */; };
 		67F6D4B6192748D700013623 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D495192748D700013623 /* Foundation.framework */; };
 		67F6D4B7192748D700013623 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D499192748D700013623 /* UIKit.framework */; };
 		67F6D4BF192748D700013623 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67F6D4BD192748D700013623 /* InfoPlist.strings */; };
 		67F6D4C1192748D700013623 /* SmartAssistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4C0192748D700013623 /* SmartAssistTests.m */; };
-		67F6D4CF192755C300013623 /* SAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4CE192755C300013623 /* SAViewController.m */; };
 		67F6D4D11927562F00013623 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D4D01927562F00013623 /* CoreData.framework */; };
 		67F6D4D41927564300013623 /* SmartAssist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4D21927564300013623 /* SmartAssist.xcdatamodeld */; };
 		67F6D4D919276B8700013623 /* SACoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4D719276B8700013623 /* SACoreDataManager.m */; };
@@ -33,6 +32,11 @@
 		67F6D5E619277FFD00013623 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5DB19277FFD00013623 /* AFURLRequestSerialization.m */; };
 		67F6D5E719277FFD00013623 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5DD19277FFD00013623 /* AFURLResponseSerialization.m */; };
 		67F6D5E819277FFD00013623 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5DF19277FFD00013623 /* AFURLSessionManager.m */; };
+		67F6D5EB192785C800013623 /* SAEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5EA192785C800013623 /* SAEvent.m */; };
+		67F6D5EE192785C900013623 /* SAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5ED192785C900013623 /* SAUser.m */; };
+		67F6D5F11927878A00013623 /* SASplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5F01927878A00013623 /* SASplashViewController.m */; };
+		67F6D5F4192787D400013623 /* SAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5F3192787D400013623 /* SAMainViewController.m */; };
+		67F6D5F81927A55300013623 /* SAEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5F71927A55300013623 /* SAEventTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,15 +60,13 @@
 		67F6D4A3192748D700013623 /* SmartAssist-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartAssist-Prefix.pch"; sourceTree = "<group>"; };
 		67F6D4A4192748D700013623 /* SAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAAppDelegate.h; sourceTree = "<group>"; };
 		67F6D4A5192748D700013623 /* SAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAAppDelegate.m; sourceTree = "<group>"; };
-		67F6D4A8192748D700013623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67F6D4A8192748D700013623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SASmartAssist.storyboard; sourceTree = "<group>"; };
 		67F6D4AD192748D700013623 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		67F6D4B3192748D700013623 /* SmartAssistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartAssistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F6D4B4192748D700013623 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		67F6D4BC192748D700013623 /* SmartAssistTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmartAssistTests-Info.plist"; sourceTree = "<group>"; };
 		67F6D4BE192748D700013623 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		67F6D4C0192748D700013623 /* SmartAssistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartAssistTests.m; sourceTree = "<group>"; };
-		67F6D4CD192755C300013623 /* SAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAViewController.h; sourceTree = "<group>"; };
-		67F6D4CE192755C300013623 /* SAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAViewController.m; sourceTree = "<group>"; };
 		67F6D4D01927562F00013623 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		67F6D4D31927564300013623 /* SmartAssist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartAssist.xcdatamodel; sourceTree = "<group>"; };
 		67F6D4D619276B8700013623 /* SACoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACoreDataManager.h; sourceTree = "<group>"; };
@@ -88,6 +90,16 @@
 		67F6D5DD19277FFD00013623 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		67F6D5DE19277FFD00013623 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		67F6D5DF19277FFD00013623 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		67F6D5E9192785C800013623 /* SAEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEvent.h; sourceTree = "<group>"; };
+		67F6D5EA192785C800013623 /* SAEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvent.m; sourceTree = "<group>"; };
+		67F6D5EC192785C900013623 /* SAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAUser.h; sourceTree = "<group>"; };
+		67F6D5ED192785C900013623 /* SAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAUser.m; sourceTree = "<group>"; };
+		67F6D5EF1927878A00013623 /* SASplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASplashViewController.h; sourceTree = "<group>"; };
+		67F6D5F01927878A00013623 /* SASplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASplashViewController.m; sourceTree = "<group>"; };
+		67F6D5F2192787D400013623 /* SAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMainViewController.h; sourceTree = "<group>"; };
+		67F6D5F3192787D400013623 /* SAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMainViewController.m; sourceTree = "<group>"; };
+		67F6D5F61927A55300013623 /* SAEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEventTableViewCell.h; sourceTree = "<group>"; };
+		67F6D5F71927A55300013623 /* SAEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEventTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,12 +163,12 @@
 			children = (
 				67F6D4CA1927556000013623 /* Classes */,
 				67F6D4CB1927556D00013623 /* BL */,
-				67F6D4DB19276DCB00013623 /* Third Parties */,
 				67F6D4A4192748D700013623 /* SAAppDelegate.h */,
 				67F6D4D21927564300013623 /* SmartAssist.xcdatamodeld */,
 				67F6D4A5192748D700013623 /* SAAppDelegate.m */,
-				67F6D4A7192748D700013623 /* Main.storyboard */,
+				67F6D4A7192748D700013623 /* SASmartAssist.storyboard */,
 				67F6D4AD192748D700013623 /* Images.xcassets */,
+				67F6D4DB19276DCB00013623 /* Third Parties */,
 				67F6D49C192748D700013623 /* Supporting Files */,
 			);
 			path = SmartAssist;
@@ -210,8 +222,11 @@
 		67F6D4CC192755C300013623 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				67F6D4CD192755C300013623 /* SAViewController.h */,
-				67F6D4CE192755C300013623 /* SAViewController.m */,
+				67F6D5F51927A51A00013623 /* Custom Cells */,
+				67F6D5EF1927878A00013623 /* SASplashViewController.h */,
+				67F6D5F01927878A00013623 /* SASplashViewController.m */,
+				67F6D5F2192787D400013623 /* SAMainViewController.h */,
+				67F6D5F3192787D400013623 /* SAMainViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -229,6 +244,10 @@
 		67F6D4DA19276D8400013623 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				67F6D5EC192785C900013623 /* SAUser.h */,
+				67F6D5ED192785C900013623 /* SAUser.m */,
+				67F6D5E9192785C800013623 /* SAEvent.h */,
+				67F6D5EA192785C800013623 /* SAEvent.m */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -265,6 +284,15 @@
 				67F6D5DF19277FFD00013623 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		67F6D5F51927A51A00013623 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				67F6D5F61927A55300013623 /* SAEventTableViewCell.h */,
+				67F6D5F71927A55300013623 /* SAEventTableViewCell.m */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,7 +374,7 @@
 			files = (
 				67F6D4AE192748D700013623 /* Images.xcassets in Resources */,
 				67F6D4A0192748D700013623 /* InfoPlist.strings in Resources */,
-				67F6D4A9192748D700013623 /* Main.storyboard in Resources */,
+				67F6D4A9192748D700013623 /* SASmartAssist.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,13 +397,17 @@
 				67F6D5E019277FFD00013623 /* AFHTTPRequestOperation.m in Sources */,
 				67F6D5E319277FFD00013623 /* AFNetworkReachabilityManager.m in Sources */,
 				67F6D5E819277FFD00013623 /* AFURLSessionManager.m in Sources */,
+				67F6D5EB192785C800013623 /* SAEvent.m in Sources */,
 				67F6D5E619277FFD00013623 /* AFURLRequestSerialization.m in Sources */,
+				67F6D5EE192785C900013623 /* SAUser.m in Sources */,
 				67F6D4A6192748D700013623 /* SAAppDelegate.m in Sources */,
 				67F6D5E719277FFD00013623 /* AFURLResponseSerialization.m in Sources */,
-				67F6D4CF192755C300013623 /* SAViewController.m in Sources */,
+				67F6D5F11927878A00013623 /* SASplashViewController.m in Sources */,
 				67F6D4D41927564300013623 /* SmartAssist.xcdatamodeld in Sources */,
 				67F6D5E119277FFD00013623 /* AFHTTPRequestOperationManager.m in Sources */,
+				67F6D5F81927A55300013623 /* SAEventTableViewCell.m in Sources */,
 				67F6D5E419277FFD00013623 /* AFSecurityPolicy.m in Sources */,
+				67F6D5F4192787D400013623 /* SAMainViewController.m in Sources */,
 				67F6D4A2192748D700013623 /* main.m in Sources */,
 				67F6D4D919276B8700013623 /* SACoreDataManager.m in Sources */,
 				67F6D5E219277FFD00013623 /* AFHTTPSessionManager.m in Sources */,
@@ -409,12 +441,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		67F6D4A7192748D700013623 /* Main.storyboard */ = {
+		67F6D4A7192748D700013623 /* SASmartAssist.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				67F6D4A8192748D700013623 /* Base */,
 			);
-			name = Main.storyboard;
+			name = SASmartAssist.storyboard;
 			sourceTree = "<group>";
 		};
 		67F6D4BD192748D700013623 /* InfoPlist.strings */ = {
