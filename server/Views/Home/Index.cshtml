@@ -1,0 +1,98 @@
+﻿@Styles.Render("~/Content/grayscale.css")
+
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#page-top">
+                <i class="fa fa-play-circle"></i>  <span class="light">Visual</span> Assist
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="/#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="/#about">About</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="/#demo">Demo</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="/#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<section class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="brand-heading">VisualAssist</h1>
+                    <p class="intro-text">A tool that helps visually impaired people get around indoor spaces.</p>
+                    <div class="page-scroll">
+                        <a href="#about" class="btn btn-circle">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>About VisualAssist</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis ligula eget libero imperdiet semper. Pellentesque eu velit eget sapien egestas bibendum vel eget sem. Maecenas iaculis, leo id aliquet bibendum, risus lorem placerat massa, non ornare sapien libero quis quam.</p>
+            <p>Sed molestie semper vestibulum. Pellentesque nibh lacus, porttitor sit amet diam sed, viverra dapibus lacus. Nunc pulvinar, arcu vehicula egestas ultrices, nulla nulla euismod mauris, at suscipit sem justo non tortor. Vivamus porta urna eget tellus accumsan, vel tincidunt tellus ultrices.</p>
+            <p>Nulla hendrerit arcu a urna dapibus blandit non a tellus. Phasellus non orci sed justo volutpat placerat. Fusce dictum bibendum nulla. Duis eget malesuada leo. Cras mattis nunc semper tempor bibendum.</p>
+        </div>
+    </div>
+</section>
+
+<section id="demo" class="content-section text-center">
+    <div class="download-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Demo</h2>
+                <a href="demo" class="btn btn-default btn-lg">Visit Demo Page</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Contact Start Bootstrap</h2>
+            <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+            <p>feedback@startbootstrap.com</p>
+            <ul class="list-inline banner-social-buttons">
+                <li>
+                    <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                </li>
+                <li>
+                    <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+@Scripts.Render("~/bundles/grayscale")
