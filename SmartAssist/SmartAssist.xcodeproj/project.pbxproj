@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67F6D496192748D700013623 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D495192748D700013623 /* Foundation.framework */; };
+		67F6D498192748D700013623 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D497192748D700013623 /* CoreGraphics.framework */; };
+		67F6D49A192748D700013623 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D499192748D700013623 /* UIKit.framework */; };
+		67F6D4A0192748D700013623 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67F6D49E192748D700013623 /* InfoPlist.strings */; };
+		67F6D4A2192748D700013623 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4A1192748D700013623 /* main.m */; };
+		67F6D4A6192748D700013623 /* SAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4A5192748D700013623 /* SAAppDelegate.m */; };
+		67F6D4A9192748D700013623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F6D4A7192748D700013623 /* Main.storyboard */; };
+		67F6D4AC192748D700013623 /* SAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4AB192748D700013623 /* SAViewController.m */; };
+		67F6D4AE192748D700013623 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F6D4AD192748D700013623 /* Images.xcassets */; };
+		67F6D4B5192748D700013623 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D4B4192748D700013623 /* XCTest.framework */; };
+		67F6D4B6192748D700013623 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D495192748D700013623 /* Foundation.framework */; };
+		67F6D4B7192748D700013623 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D499192748D700013623 /* UIKit.framework */; };
+		67F6D4BF192748D700013623 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67F6D4BD192748D700013623 /* InfoPlist.strings */; };
+		67F6D4C1192748D700013623 /* SmartAssistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4C0192748D700013623 /* SmartAssistTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67F6D4B8192748D700013623 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67F6D48A192748D700013623 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67F6D491192748D700013623;
+			remoteInfo = SmartAssist;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67F6D492192748D700013623 /* SmartAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F6D495192748D700013623 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		67F6D497192748D700013623 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		67F6D499192748D700013623 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		67F6D49D192748D700013623 /* SmartAssist-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmartAssist-Info.plist"; sourceTree = "<group>"; };
+		67F6D49F192748D700013623 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		67F6D4A1192748D700013623 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67F6D4A3192748D700013623 /* SmartAssist-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartAssist-Prefix.pch"; sourceTree = "<group>"; };
+		67F6D4A4192748D700013623 /* SAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAAppDelegate.h; sourceTree = "<group>"; };
+		67F6D4A5192748D700013623 /* SAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAAppDelegate.m; sourceTree = "<group>"; };
+		67F6D4A8192748D700013623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67F6D4AA192748D700013623 /* SAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAViewController.h; sourceTree = "<group>"; };
+		67F6D4AB192748D700013623 /* SAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAViewController.m; sourceTree = "<group>"; };
+		67F6D4AD192748D700013623 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		67F6D4B3192748D700013623 /* SmartAssistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartAssistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F6D4B4192748D700013623 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		67F6D4BC192748D700013623 /* SmartAssistTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmartAssistTests-Info.plist"; sourceTree = "<group>"; };
+		67F6D4BE192748D700013623 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		67F6D4C0192748D700013623 /* SmartAssistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartAssistTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67F6D48F192748D700013623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67F6D498192748D700013623 /* CoreGraphics.framework in Frameworks */,
+				67F6D49A192748D700013623 /* UIKit.framework in Frameworks */,
+				67F6D496192748D700013623 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67F6D4B0192748D700013623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67F6D4B5192748D700013623 /* XCTest.framework in Frameworks */,
+				67F6D4B7192748D700013623 /* UIKit.framework in Frameworks */,
+				67F6D4B6192748D700013623 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67F6D489192748D700013623 = {
+			isa = PBXGroup;
+			children = (
+				67F6D49B192748D700013623 /* SmartAssist */,
+				67F6D4BA192748D700013623 /* SmartAssistTests */,
+				67F6D494192748D700013623 /* Frameworks */,
+				67F6D493192748D700013623 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67F6D493192748D700013623 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67F6D492192748D700013623 /* SmartAssist.app */,
+				67F6D4B3192748D700013623 /* SmartAssistTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67F6D494192748D700013623 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67F6D495192748D700013623 /* Foundation.framework */,
+				67F6D497192748D700013623 /* CoreGraphics.framework */,
+				67F6D499192748D700013623 /* UIKit.framework */,
+				67F6D4B4192748D700013623 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67F6D49B192748D700013623 /* SmartAssist */ = {
+			isa = PBXGroup;
+			children = (
+				67F6D4A4192748D700013623 /* SAAppDelegate.h */,
+				67F6D4A5192748D700013623 /* SAAppDelegate.m */,
+				67F6D4A7192748D700013623 /* Main.storyboard */,
+				67F6D4AA192748D700013623 /* SAViewController.h */,
+				67F6D4AB192748D700013623 /* SAViewController.m */,
+				67F6D4AD192748D700013623 /* Images.xcassets */,
+				67F6D49C192748D700013623 /* Supporting Files */,
+			);
+			path = SmartAssist;
+			sourceTree = "<group>";
+		};
+		67F6D49C192748D700013623 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67F6D49D192748D700013623 /* SmartAssist-Info.plist */,
+				67F6D49E192748D700013623 /* InfoPlist.strings */,
+				67F6D4A1192748D700013623 /* main.m */,
+				67F6D4A3192748D700013623 /* SmartAssist-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67F6D4BA192748D700013623 /* SmartAssistTests */ = {
+			isa = PBXGroup;
+			children = (
+				67F6D4C0192748D700013623 /* SmartAssistTests.m */,
+				67F6D4BB192748D700013623 /* Supporting Files */,
+			);
+			path = SmartAssistTests;
+			sourceTree = "<group>";
+		};
+		67F6D4BB192748D700013623 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67F6D4BC192748D700013623 /* SmartAssistTests-Info.plist */,
+				67F6D4BD192748D700013623 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67F6D491192748D700013623 /* SmartAssist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67F6D4C4192748D700013623 /* Build configuration list for PBXNativeTarget "SmartAssist" */;
+			buildPhases = (
+				67F6D48E192748D700013623 /* Sources */,
+				67F6D48F192748D700013623 /* Frameworks */,
+				67F6D490192748D700013623 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartAssist;
+			productName = SmartAssist;
+			productReference = 67F6D492192748D700013623 /* SmartAssist.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67F6D4B2192748D700013623 /* SmartAssistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67F6D4C7192748D700013623 /* Build configuration list for PBXNativeTarget "SmartAssistTests" */;
+			buildPhases = (
+				67F6D4AF192748D700013623 /* Sources */,
+				67F6D4B0192748D700013623 /* Frameworks */,
+				67F6D4B1192748D700013623 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67F6D4B9192748D700013623 /* PBXTargetDependency */,
+			);
+			name = SmartAssistTests;
+			productName = SmartAssistTests;
+			productReference = 67F6D4B3192748D700013623 /* SmartAssistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67F6D48A192748D700013623 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SA;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = COM.SmartAssist;
+				TargetAttributes = {
+					67F6D4B2192748D700013623 = {
+						TestTargetID = 67F6D491192748D700013623;
+					};
+				};
+			};
+			buildConfigurationList = 67F6D48D192748D700013623 /* Build configuration list for PBXProject "SmartAssist" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67F6D489192748D700013623;
+			productRefGroup = 67F6D493192748D700013623 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67F6D491192748D700013623 /* SmartAssist */,
+				67F6D4B2192748D700013623 /* SmartAssistTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67F6D490192748D700013623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67F6D4AE192748D700013623 /* Images.xcassets in Resources */,
+				67F6D4A0192748D700013623 /* InfoPlist.strings in Resources */,
+				67F6D4A9192748D700013623 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67F6D4B1192748D700013623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67F6D4BF192748D700013623 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67F6D48E192748D700013623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67F6D4A6192748D700013623 /* SAAppDelegate.m in Sources */,
+				67F6D4AC192748D700013623 /* SAViewController.m in Sources */,
+				67F6D4A2192748D700013623 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67F6D4AF192748D700013623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67F6D4C1192748D700013623 /* SmartAssistTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67F6D4B9192748D700013623 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67F6D491192748D700013623 /* SmartAssist */;
+			targetProxy = 67F6D4B8192748D700013623 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		67F6D49E192748D700013623 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67F6D49F192748D700013623 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		67F6D4A7192748D700013623 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67F6D4A8192748D700013623 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		67F6D4BD192748D700013623 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67F6D4BE192748D700013623 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67F6D4C2192748D700013623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		67F6D4C3192748D700013623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67F6D4C5192748D700013623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartAssist/SmartAssist-Prefix.pch";
+				INFOPLIST_FILE = "SmartAssist/SmartAssist-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		67F6D4C6192748D700013623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartAssist/SmartAssist-Prefix.pch";
+				INFOPLIST_FILE = "SmartAssist/SmartAssist-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		67F6D4C8192748D700013623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SmartAssist.app/SmartAssist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartAssist/SmartAssist-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SmartAssistTests/SmartAssistTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		67F6D4C9192748D700013623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SmartAssist.app/SmartAssist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartAssist/SmartAssist-Prefix.pch";
+				INFOPLIST_FILE = "SmartAssistTests/SmartAssistTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67F6D48D192748D700013623 /* Build configuration list for PBXProject "SmartAssist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67F6D4C2192748D700013623 /* Debug */,
+				67F6D4C3192748D700013623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67F6D4C4192748D700013623 /* Build configuration list for PBXNativeTarget "SmartAssist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67F6D4C5192748D700013623 /* Debug */,
+				67F6D4C6192748D700013623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		67F6D4C7192748D700013623 /* Build configuration list for PBXNativeTarget "SmartAssistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67F6D4C8192748D700013623 /* Debug */,
+				67F6D4C9192748D700013623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67F6D48A192748D700013623 /* Project object */;
+}
