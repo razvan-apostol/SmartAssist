@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67D0C25D1927B62E00F59CC8 /* SAEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D0C2541927B62E00F59CC8 /* SAEvent.m */; };
+		67D0C25E1927B62E00F59CC8 /* SAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D0C2561927B62E00F59CC8 /* SAUser.m */; };
+		67D0C25F1927B62E00F59CC8 /* SACoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D0C2581927B62E00F59CC8 /* SACoreDataManager.m */; };
+		67D0C2631927B66300F59CC8 /* SADefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D0C2621927B66300F59CC8 /* SADefines.m */; };
+		67D0C2661927BAD200F59CC8 /* SARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D0C2651927BAD200F59CC8 /* SARequestManager.m */; };
+		67D0C2681927C44700F59CC8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D0C2671927C44700F59CC8 /* CoreLocation.framework */; };
+		67D0C26A1927C44F00F59CC8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D0C2691927C44F00F59CC8 /* CoreBluetooth.framework */; };
+		67D0C2731927C4CD00F59CC8 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D0C2721927C4CD00F59CC8 /* libEstimoteSDK.a */; };
 		67F6D496192748D700013623 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D495192748D700013623 /* Foundation.framework */; };
 		67F6D498192748D700013623 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D497192748D700013623 /* CoreGraphics.framework */; };
 		67F6D49A192748D700013623 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D499192748D700013623 /* UIKit.framework */; };
@@ -22,7 +30,6 @@
 		67F6D4C1192748D700013623 /* SmartAssistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4C0192748D700013623 /* SmartAssistTests.m */; };
 		67F6D4D11927562F00013623 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D4D01927562F00013623 /* CoreData.framework */; };
 		67F6D4D41927564300013623 /* SmartAssist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4D21927564300013623 /* SmartAssist.xcdatamodeld */; };
-		67F6D4D919276B8700013623 /* SACoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D4D719276B8700013623 /* SACoreDataManager.m */; };
 		67F6D5E019277FFD00013623 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5CE19277FFD00013623 /* AFHTTPRequestOperation.m */; };
 		67F6D5E119277FFD00013623 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5D019277FFD00013623 /* AFHTTPRequestOperationManager.m */; };
 		67F6D5E219277FFD00013623 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5D219277FFD00013623 /* AFHTTPSessionManager.m */; };
@@ -32,8 +39,6 @@
 		67F6D5E619277FFD00013623 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5DB19277FFD00013623 /* AFURLRequestSerialization.m */; };
 		67F6D5E719277FFD00013623 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5DD19277FFD00013623 /* AFURLResponseSerialization.m */; };
 		67F6D5E819277FFD00013623 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5DF19277FFD00013623 /* AFURLSessionManager.m */; };
-		67F6D5EB192785C800013623 /* SAEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5EA192785C800013623 /* SAEvent.m */; };
-		67F6D5EE192785C900013623 /* SAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5ED192785C900013623 /* SAUser.m */; };
 		67F6D5F11927878A00013623 /* SASplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5F01927878A00013623 /* SASplashViewController.m */; };
 		67F6D5F4192787D400013623 /* SAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5F3192787D400013623 /* SAMainViewController.m */; };
 		67F6D5F81927A55300013623 /* SAEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F6D5F71927A55300013623 /* SAEventTableViewCell.m */; };
@@ -50,6 +55,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67D0C2531927B62E00F59CC8 /* SAEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEvent.h; sourceTree = "<group>"; };
+		67D0C2541927B62E00F59CC8 /* SAEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvent.m; sourceTree = "<group>"; };
+		67D0C2551927B62E00F59CC8 /* SAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAUser.h; sourceTree = "<group>"; };
+		67D0C2561927B62E00F59CC8 /* SAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAUser.m; sourceTree = "<group>"; };
+		67D0C2571927B62E00F59CC8 /* SACoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACoreDataManager.h; sourceTree = "<group>"; };
+		67D0C2581927B62E00F59CC8 /* SACoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SACoreDataManager.m; sourceTree = "<group>"; };
+		67D0C2611927B66300F59CC8 /* SADefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SADefines.h; sourceTree = "<group>"; };
+		67D0C2621927B66300F59CC8 /* SADefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SADefines.m; sourceTree = "<group>"; };
+		67D0C2641927BAD200F59CC8 /* SARequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARequestManager.h; sourceTree = "<group>"; };
+		67D0C2651927BAD200F59CC8 /* SARequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SARequestManager.m; sourceTree = "<group>"; };
+		67D0C2671927C44700F59CC8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		67D0C2691927C44F00F59CC8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		67D0C26D1927C4CD00F59CC8 /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
+		67D0C26E1927C4CD00F59CC8 /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
+		67D0C26F1927C4CD00F59CC8 /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
+		67D0C2701927C4CD00F59CC8 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
+		67D0C2711927C4CD00F59CC8 /* ESTBeaconUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconUpdateInfo.h; sourceTree = "<group>"; };
+		67D0C2721927C4CD00F59CC8 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK.a; sourceTree = "<group>"; };
 		67F6D492192748D700013623 /* SmartAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F6D495192748D700013623 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		67F6D497192748D700013623 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,8 +92,6 @@
 		67F6D4C0192748D700013623 /* SmartAssistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartAssistTests.m; sourceTree = "<group>"; };
 		67F6D4D01927562F00013623 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		67F6D4D31927564300013623 /* SmartAssist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartAssist.xcdatamodel; sourceTree = "<group>"; };
-		67F6D4D619276B8700013623 /* SACoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACoreDataManager.h; sourceTree = "<group>"; };
-		67F6D4D719276B8700013623 /* SACoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SACoreDataManager.m; sourceTree = "<group>"; };
 		67F6D5CD19277FFD00013623 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		67F6D5CE19277FFD00013623 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		67F6D5CF19277FFD00013623 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -90,10 +111,6 @@
 		67F6D5DD19277FFD00013623 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		67F6D5DE19277FFD00013623 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		67F6D5DF19277FFD00013623 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		67F6D5E9192785C800013623 /* SAEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEvent.h; sourceTree = "<group>"; };
-		67F6D5EA192785C800013623 /* SAEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvent.m; sourceTree = "<group>"; };
-		67F6D5EC192785C900013623 /* SAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAUser.h; sourceTree = "<group>"; };
-		67F6D5ED192785C900013623 /* SAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAUser.m; sourceTree = "<group>"; };
 		67F6D5EF1927878A00013623 /* SASplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASplashViewController.h; sourceTree = "<group>"; };
 		67F6D5F01927878A00013623 /* SASplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASplashViewController.m; sourceTree = "<group>"; };
 		67F6D5F2192787D400013623 /* SAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMainViewController.h; sourceTree = "<group>"; };
@@ -107,10 +124,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D0C26A1927C44F00F59CC8 /* CoreBluetooth.framework in Frameworks */,
+				67D0C2681927C44700F59CC8 /* CoreLocation.framework in Frameworks */,
 				67F6D4D11927562F00013623 /* CoreData.framework in Frameworks */,
 				67F6D498192748D700013623 /* CoreGraphics.framework in Frameworks */,
 				67F6D49A192748D700013623 /* UIKit.framework in Frameworks */,
 				67F6D496192748D700013623 /* Foundation.framework in Frameworks */,
+				67D0C2731927C4CD00F59CC8 /* libEstimoteSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +147,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67D0C2501927B62E00F59CC8 /* BL */ = {
+			isa = PBXGroup;
+			children = (
+				67D0C2511927B62E00F59CC8 /* Core Data */,
+			);
+			path = BL;
+			sourceTree = "<group>";
+		};
+		67D0C2511927B62E00F59CC8 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				67D0C2521927B62E00F59CC8 /* Objects */,
+				67D0C2571927B62E00F59CC8 /* SACoreDataManager.h */,
+				67D0C2581927B62E00F59CC8 /* SACoreDataManager.m */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		67D0C2521927B62E00F59CC8 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				67D0C2531927B62E00F59CC8 /* SAEvent.h */,
+				67D0C2541927B62E00F59CC8 /* SAEvent.m */,
+				67D0C2551927B62E00F59CC8 /* SAUser.h */,
+				67D0C2561927B62E00F59CC8 /* SAUser.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		67D0C2591927B62E00F59CC8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				67D0C2611927B66300F59CC8 /* SADefines.h */,
+				67D0C2621927B66300F59CC8 /* SADefines.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		67D0C25A1927B62E00F59CC8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				67D0C2641927BAD200F59CC8 /* SARequestManager.h */,
+				67D0C2651927BAD200F59CC8 /* SARequestManager.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		67D0C26B1927C4CD00F59CC8 /* EstimoteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				67D0C26C1927C4CD00F59CC8 /* Headers */,
+				67D0C2721927C4CD00F59CC8 /* libEstimoteSDK.a */,
+			);
+			path = EstimoteSDK;
+			sourceTree = "<group>";
+		};
+		67D0C26C1927C4CD00F59CC8 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				67D0C26D1927C4CD00F59CC8 /* ESTBeacon.h */,
+				67D0C26E1927C4CD00F59CC8 /* ESTBeaconDefinitions.h */,
+				67D0C26F1927C4CD00F59CC8 /* ESTBeaconManager.h */,
+				67D0C2701927C4CD00F59CC8 /* ESTBeaconRegion.h */,
+				67D0C2711927C4CD00F59CC8 /* ESTBeaconUpdateInfo.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		67F6D489192748D700013623 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +237,8 @@
 		67F6D494192748D700013623 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67D0C2691927C44F00F59CC8 /* CoreBluetooth.framework */,
+				67D0C2671927C44700F59CC8 /* CoreLocation.framework */,
 				67F6D4D01927562F00013623 /* CoreData.framework */,
 				67F6D495192748D700013623 /* Foundation.framework */,
 				67F6D497192748D700013623 /* CoreGraphics.framework */,
@@ -162,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				67F6D4CA1927556000013623 /* Classes */,
-				67F6D4CB1927556D00013623 /* BL */,
 				67F6D4A4192748D700013623 /* SAAppDelegate.h */,
 				67F6D4D21927564300013623 /* SmartAssist.xcdatamodeld */,
 				67F6D4A5192748D700013623 /* SAAppDelegate.m */,
@@ -206,17 +295,12 @@
 		67F6D4CA1927556000013623 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				67D0C2591927B62E00F59CC8 /* Common */,
 				67F6D4CC192755C300013623 /* UI */,
+				67D0C2501927B62E00F59CC8 /* BL */,
+				67D0C25A1927B62E00F59CC8 /* Networking */,
 			);
 			path = Classes;
-			sourceTree = SOURCE_ROOT;
-		};
-		67F6D4CB1927556D00013623 /* BL */ = {
-			isa = PBXGroup;
-			children = (
-				67F6D4D519276B8700013623 /* Core Data */,
-			);
-			path = BL;
 			sourceTree = SOURCE_ROOT;
 		};
 		67F6D4CC192755C300013623 /* UI */ = {
@@ -231,30 +315,10 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		67F6D4D519276B8700013623 /* Core Data */ = {
-			isa = PBXGroup;
-			children = (
-				67F6D4DA19276D8400013623 /* Objects */,
-				67F6D4D619276B8700013623 /* SACoreDataManager.h */,
-				67F6D4D719276B8700013623 /* SACoreDataManager.m */,
-			);
-			path = "Core Data";
-			sourceTree = "<group>";
-		};
-		67F6D4DA19276D8400013623 /* Objects */ = {
-			isa = PBXGroup;
-			children = (
-				67F6D5EC192785C900013623 /* SAUser.h */,
-				67F6D5ED192785C900013623 /* SAUser.m */,
-				67F6D5E9192785C800013623 /* SAEvent.h */,
-				67F6D5EA192785C800013623 /* SAEvent.m */,
-			);
-			path = Objects;
-			sourceTree = "<group>";
-		};
 		67F6D4DB19276DCB00013623 /* Third Parties */ = {
 			isa = PBXGroup;
 			children = (
+				67D0C26B1927C4CD00F59CC8 /* EstimoteSDK */,
 				67F6D5CC19277FFD00013623 /* AFNetworking */,
 			);
 			path = "Third Parties";
@@ -343,6 +407,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = COM.SmartAssist;
 				TargetAttributes = {
+					67F6D491192748D700013623 = {
+						DevelopmentTeam = Q439YG92FR;
+					};
 					67F6D4B2192748D700013623 = {
 						TestTargetID = 67F6D491192748D700013623;
 					};
@@ -394,22 +461,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				67F6D5E519277FFD00013623 /* AFURLConnectionOperation.m in Sources */,
+				67D0C2661927BAD200F59CC8 /* SARequestManager.m in Sources */,
 				67F6D5E019277FFD00013623 /* AFHTTPRequestOperation.m in Sources */,
 				67F6D5E319277FFD00013623 /* AFNetworkReachabilityManager.m in Sources */,
 				67F6D5E819277FFD00013623 /* AFURLSessionManager.m in Sources */,
-				67F6D5EB192785C800013623 /* SAEvent.m in Sources */,
 				67F6D5E619277FFD00013623 /* AFURLRequestSerialization.m in Sources */,
-				67F6D5EE192785C900013623 /* SAUser.m in Sources */,
 				67F6D4A6192748D700013623 /* SAAppDelegate.m in Sources */,
 				67F6D5E719277FFD00013623 /* AFURLResponseSerialization.m in Sources */,
 				67F6D5F11927878A00013623 /* SASplashViewController.m in Sources */,
 				67F6D4D41927564300013623 /* SmartAssist.xcdatamodeld in Sources */,
 				67F6D5E119277FFD00013623 /* AFHTTPRequestOperationManager.m in Sources */,
+				67D0C25E1927B62E00F59CC8 /* SAUser.m in Sources */,
+				67D0C25D1927B62E00F59CC8 /* SAEvent.m in Sources */,
+				67D0C2631927B66300F59CC8 /* SADefines.m in Sources */,
 				67F6D5F81927A55300013623 /* SAEventTableViewCell.m in Sources */,
 				67F6D5E419277FFD00013623 /* AFSecurityPolicy.m in Sources */,
+				67D0C25F1927B62E00F59CC8 /* SACoreDataManager.m in Sources */,
 				67F6D5F4192787D400013623 /* SAMainViewController.m in Sources */,
 				67F6D4A2192748D700013623 /* main.m in Sources */,
-				67F6D4D919276B8700013623 /* SACoreDataManager.m in Sources */,
 				67F6D5E219277FFD00013623 /* AFHTTPSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -542,6 +612,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SmartAssist/SmartAssist-Prefix.pch";
 				INFOPLIST_FILE = "SmartAssist/SmartAssist-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Third",
+					Parties/EstimoteSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -552,6 +627,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -559,6 +635,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SmartAssist/SmartAssist-Prefix.pch";
 				INFOPLIST_FILE = "SmartAssist/SmartAssist-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Third",
+					Parties/EstimoteSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
