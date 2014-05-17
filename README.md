@@ -1,2 +1,4 @@
-visualassist
-============
+SmartAssist
+===========
+
+SmartAssist
