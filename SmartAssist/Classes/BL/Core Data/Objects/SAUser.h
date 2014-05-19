@@ -13,10 +13,10 @@
 
 @interface SAUser : NSManagedObject
 
-@property (nonatomic, retain) NSString * identifier;
+@property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * url;
-@property (nonatomic, retain) NSString * deviceID;
+@property (nonatomic, retain) NSNumber * deviceID;
 @property (nonatomic, retain) NSSet *events;
 @end
 

@@ -10,12 +10,13 @@
 #import "AFNetworking.h"
 #import "SADefines.h"
 
+
 NSString *const kIlieHalipHomeServerURL     = @"http://79.118.91.212:2500";
 NSString *const kStartupServerURL           = @"http://10.2.1.193";
 
 @interface SARequestManager ()
 
-@property (copy, nonatomic) RequestCompletionBlock completionBlock;
+@property (copy, nonatomic,readwrite) RequestCompletionBlock completionBlock;
 
 @property (strong, nonatomic) AFHTTPRequestOperationManager * operationManager;
 
@@ -58,10 +59,25 @@ NSString *const kStartupServerURL           = @"http://10.2.1.193";
     self.completionBlock = completionBlock;
     
     NSString *url = [NSString stringWithFormat:@"%@/api/User", self.serverBaseURL];
+    
+    self.operationManager.responseSerializer = [AFJSONResponseSerializer serializer];
     [self.operationManager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         SALog(@"Users: %@", responseObject);
         
-        [self executeComplitionBlockWithObj:nil];
+        [self executeComplitionBlockWithObj:responseObject];
+        
+        NSArray *users = (NSArray *)responseObject;
+        
+//        if (users.count) {
+//            NSDictionary *firstUserDict = [users firstObject];
+//            
+//            NSNumber *userID = firstUserDict[@"Id"];
+//            
+//            WKUser *user = [[[SACoreDataManager sharedManager] fetchDataWithParameterBlock:^(NSFetchRequest *requestToBeParametered) {
+//                [requestToBeParametered setPredicate:[NSPredicate predicateWithFormat:@"identifier == %@", userID]];
+//            } andTableName:@"WKUser"] firstObject];
+//        }
+        
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         SALog(@"Users Error: %@", error);

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SABaeViewController.h"
 
-@interface SAMainViewController : UIViewController
+@interface SAMainViewController : SABaeViewController
+
+@property (nonatomic, strong) NSArray * nextBeaconsArray;
 
 @end

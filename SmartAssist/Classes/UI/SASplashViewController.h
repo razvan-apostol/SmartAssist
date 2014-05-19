@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SABaeViewController.h"
 
-@interface SASplashViewController : UIViewController
+@interface SASplashViewController : SABaeViewController
 
 @end

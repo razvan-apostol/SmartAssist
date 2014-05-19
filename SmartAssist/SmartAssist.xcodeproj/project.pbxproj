@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67A4F6A71928211300B830A7 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A4F6A61928211300B830A7 /* libEstimoteSDK.a */; };
+		679F55281928399900842571 /* SABaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 679F55271928399900842571 /* SABaseRequest.m */; };
+		679F553D192843DB00842571 /* SABaeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 679F553C192843DB00842571 /* SABaeViewController.m */; };
+		67A0454E19288EDB00F4806E /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A0454D19288EDB00F4806E /* libEstimoteSDK.a */; };
+		67A0455119289EC500F4806E /* SABeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A0455019289EC500F4806E /* SABeaconManager.m */; };
 		67D0C25D1927B62E00F59CC8 /* SAEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D0C2541927B62E00F59CC8 /* SAEvent.m */; };
 		67D0C25E1927B62E00F59CC8 /* SAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D0C2561927B62E00F59CC8 /* SAUser.m */; };
 		67D0C25F1927B62E00F59CC8 /* SACoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D0C2581927B62E00F59CC8 /* SACoreDataManager.m */; };
 		67D0C2631927B66300F59CC8 /* SADefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D0C2621927B66300F59CC8 /* SADefines.m */; };
-		67D0C2661927BAD200F59CC8 /* SARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D0C2651927BAD200F59CC8 /* SARequestManager.m */; };
 		67D0C2681927C44700F59CC8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D0C2671927C44700F59CC8 /* CoreLocation.framework */; };
 		67D0C26A1927C44F00F59CC8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D0C2691927C44F00F59CC8 /* CoreBluetooth.framework */; };
 		67F6D496192748D700013623 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F6D495192748D700013623 /* Foundation.framework */; };
@@ -55,12 +57,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		67A4F6A11928211300B830A7 /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
-		67A4F6A21928211300B830A7 /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
-		67A4F6A31928211300B830A7 /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
-		67A4F6A41928211300B830A7 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
-		67A4F6A51928211300B830A7 /* ESTBeaconUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconUpdateInfo.h; sourceTree = "<group>"; };
-		67A4F6A61928211300B830A7 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK.a; sourceTree = "<group>"; };
+		679F55261928399900842571 /* SABaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SABaseRequest.h; sourceTree = "<group>"; };
+		679F55271928399900842571 /* SABaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SABaseRequest.m; sourceTree = "<group>"; };
+		679F553B192843DB00842571 /* SABaeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SABaeViewController.h; sourceTree = "<group>"; };
+		679F553C192843DB00842571 /* SABaeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SABaeViewController.m; sourceTree = "<group>"; };
+		67A0454819288EDB00F4806E /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
+		67A0454919288EDB00F4806E /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
+		67A0454A19288EDB00F4806E /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
+		67A0454B19288EDB00F4806E /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
+		67A0454C19288EDB00F4806E /* ESTBeaconUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconUpdateInfo.h; sourceTree = "<group>"; };
+		67A0454D19288EDB00F4806E /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK.a; sourceTree = "<group>"; };
+		67A0454F19289EC500F4806E /* SABeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SABeaconManager.h; sourceTree = "<group>"; };
+		67A0455019289EC500F4806E /* SABeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SABeaconManager.m; sourceTree = "<group>"; };
 		67D0C2531927B62E00F59CC8 /* SAEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEvent.h; sourceTree = "<group>"; };
 		67D0C2541927B62E00F59CC8 /* SAEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvent.m; sourceTree = "<group>"; };
 		67D0C2551927B62E00F59CC8 /* SAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAUser.h; sourceTree = "<group>"; };
@@ -69,8 +77,6 @@
 		67D0C2581927B62E00F59CC8 /* SACoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SACoreDataManager.m; sourceTree = "<group>"; };
 		67D0C2611927B66300F59CC8 /* SADefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SADefines.h; sourceTree = "<group>"; };
 		67D0C2621927B66300F59CC8 /* SADefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SADefines.m; sourceTree = "<group>"; };
-		67D0C2641927BAD200F59CC8 /* SARequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARequestManager.h; sourceTree = "<group>"; };
-		67D0C2651927BAD200F59CC8 /* SARequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SARequestManager.m; sourceTree = "<group>"; };
 		67D0C2671927C44700F59CC8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		67D0C2691927C44F00F59CC8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		67F6D492192748D700013623 /* SmartAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,7 +136,7 @@
 				67F6D498192748D700013623 /* CoreGraphics.framework in Frameworks */,
 				67F6D49A192748D700013623 /* UIKit.framework in Frameworks */,
 				67F6D496192748D700013623 /* Foundation.framework in Frameworks */,
-				67A4F6A71928211300B830A7 /* libEstimoteSDK.a in Frameworks */,
+				67A0454E19288EDB00F4806E /* libEstimoteSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,23 +153,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		67A4F69F1928211300B830A7 /* EstimoteSDK */ = {
+		67A0454619288EDB00F4806E /* EstimoteSDK */ = {
 			isa = PBXGroup;
 			children = (
-				67A4F6A01928211300B830A7 /* Headers */,
-				67A4F6A61928211300B830A7 /* libEstimoteSDK.a */,
+				67A0454719288EDB00F4806E /* Headers */,
+				67A0454D19288EDB00F4806E /* libEstimoteSDK.a */,
 			);
 			path = EstimoteSDK;
 			sourceTree = "<group>";
 		};
-		67A4F6A01928211300B830A7 /* Headers */ = {
+		67A0454719288EDB00F4806E /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				67A4F6A11928211300B830A7 /* ESTBeacon.h */,
-				67A4F6A21928211300B830A7 /* ESTBeaconDefinitions.h */,
-				67A4F6A31928211300B830A7 /* ESTBeaconManager.h */,
-				67A4F6A41928211300B830A7 /* ESTBeaconRegion.h */,
-				67A4F6A51928211300B830A7 /* ESTBeaconUpdateInfo.h */,
+				67A0454819288EDB00F4806E /* ESTBeacon.h */,
+				67A0454919288EDB00F4806E /* ESTBeaconDefinitions.h */,
+				67A0454A19288EDB00F4806E /* ESTBeaconManager.h */,
+				67A0454B19288EDB00F4806E /* ESTBeaconRegion.h */,
+				67A0454C19288EDB00F4806E /* ESTBeaconUpdateInfo.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -172,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				67D0C2511927B62E00F59CC8 /* Core Data */,
+				67A0454F19289EC500F4806E /* SABeaconManager.h */,
+				67A0455019289EC500F4806E /* SABeaconManager.m */,
 			);
 			path = BL;
 			sourceTree = "<group>";
@@ -209,8 +217,8 @@
 		67D0C25A1927B62E00F59CC8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				67D0C2641927BAD200F59CC8 /* SARequestManager.h */,
-				67D0C2651927BAD200F59CC8 /* SARequestManager.m */,
+				679F55261928399900842571 /* SABaseRequest.h */,
+				679F55271928399900842571 /* SABaseRequest.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -311,6 +319,8 @@
 				67F6D5F01927878A00013623 /* SASplashViewController.m */,
 				67F6D5F2192787D400013623 /* SAMainViewController.h */,
 				67F6D5F3192787D400013623 /* SAMainViewController.m */,
+				679F553B192843DB00842571 /* SABaeViewController.h */,
+				679F553C192843DB00842571 /* SABaeViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -318,7 +328,7 @@
 		67F6D4DB19276DCB00013623 /* Third Parties */ = {
 			isa = PBXGroup;
 			children = (
-				67A4F69F1928211300B830A7 /* EstimoteSDK */,
+				67A0454619288EDB00F4806E /* EstimoteSDK */,
 				67F6D5CC19277FFD00013623 /* AFNetworking */,
 			);
 			path = "Third Parties";
@@ -461,7 +471,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67F6D5E519277FFD00013623 /* AFURLConnectionOperation.m in Sources */,
-				67D0C2661927BAD200F59CC8 /* SARequestManager.m in Sources */,
 				67F6D5E019277FFD00013623 /* AFHTTPRequestOperation.m in Sources */,
 				67F6D5E319277FFD00013623 /* AFNetworkReachabilityManager.m in Sources */,
 				67F6D5E819277FFD00013623 /* AFURLSessionManager.m in Sources */,
@@ -476,7 +485,10 @@
 				67D0C2631927B66300F59CC8 /* SADefines.m in Sources */,
 				67F6D5F81927A55300013623 /* SAEventTableViewCell.m in Sources */,
 				67F6D5E419277FFD00013623 /* AFSecurityPolicy.m in Sources */,
+				679F55281928399900842571 /* SABaseRequest.m in Sources */,
 				67D0C25F1927B62E00F59CC8 /* SACoreDataManager.m in Sources */,
+				67A0455119289EC500F4806E /* SABeaconManager.m in Sources */,
+				679F553D192843DB00842571 /* SABaeViewController.m in Sources */,
 				67F6D5F4192787D400013623 /* SAMainViewController.m in Sources */,
 				67F6D4A2192748D700013623 /* main.m in Sources */,
 				67F6D5E219277FFD00013623 /* AFHTTPSessionManager.m in Sources */,
@@ -618,6 +630,10 @@
 					Parties/EstimoteSDK,
 					"$(PROJECT_DIR)/Third",
 					Parties/EstimoteSDK,
+					"$(PROJECT_DIR)/Third",
+					Parties/EstimoteSDK,
+					"$(PROJECT_DIR)/Third",
+					Parties/EstimoteSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -639,6 +655,10 @@
 				INFOPLIST_FILE = "SmartAssist/SmartAssist-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Third",
+					Parties/EstimoteSDK,
+					"$(PROJECT_DIR)/Third",
+					Parties/EstimoteSDK,
 					"$(PROJECT_DIR)/Third",
 					Parties/EstimoteSDK,
 					"$(PROJECT_DIR)/Third",

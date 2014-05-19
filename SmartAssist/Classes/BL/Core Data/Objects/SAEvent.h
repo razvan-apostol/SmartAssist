@@ -12,11 +12,15 @@
 
 @interface SAEvent : NSManagedObject
 
-@property (nonatomic, retain) NSString * identifier;
+@property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) NSString * message;
 @property (nonatomic, retain) NSString * details;
-@property (nonatomic, retain) NSString * majorID;
-@property (nonatomic, retain) NSString * minorID;
+@property (nonatomic, retain) NSNumber * majorID;
+@property (nonatomic, retain) NSNumber * minorID;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * color;
+@property (nonatomic, retain) NSNumber * beaconID;
+@property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSManagedObject *user;
 
 @end

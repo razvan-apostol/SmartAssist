@@ -16,6 +16,10 @@
 @dynamic details;
 @dynamic majorID;
 @dynamic minorID;
+@dynamic name;
+@dynamic color;
+@dynamic beaconID;
+@dynamic type;
 @dynamic user;
 
 @end

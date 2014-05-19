@@ -10,4 +10,7 @@
 
 @interface SAEventTableViewCell : UITableViewCell
 
+
+@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+
 @end
